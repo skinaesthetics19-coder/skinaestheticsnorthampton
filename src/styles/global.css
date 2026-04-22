@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-rose-primary: #C4717A;
+  --color-coral: #D4856A;
+  --color-blush: #E8B4A8;
+  --color-blush-light: #F5E6E0;
+  --color-gold-accent: #C9A84C;
+  --color-off-white: #FAF8F5;
+  --color-charcoal: #1C1C1C;
+  --color-warm-grey: #6B6B6B;
+  --color-light-grey: #EDE8E4;
+
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+}
+
+:root {
+  --rose-primary: #C4717A;
+  --coral: #D4856A;
+  --blush: #E8B4A8;
+  --blush-light: #F5E6E0;
+  --gold-accent: #C9A84C;
+  --white: #FFFFFF;
+  --off-white: #FAF8F5;
+  --charcoal: #1C1C1C;
+  --warm-grey: #6B6B6B;
+  --light-grey: #EDE8E4;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--charcoal);
+  background-color: var(--white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-heading);
+  line-height: 1.15;
+  font-weight: 300;
+}
+
+/* Scroll reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* Section divider */
+.section-divider {
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--rose-primary), var(--coral));
+  margin: 0 auto 1.5rem;
+  border-radius: 2px;
+}
+
+/* Promotional shimmer */
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.promo-shimmer {
+  background: linear-gradient(90deg, var(--rose-primary) 0%, var(--coral) 30%, #e08090 50%, var(--coral) 70%, var(--rose-primary) 100%);
+  background-size: 200% auto;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Ken Burns hero */
+@keyframes kenBurns {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.08); }
+}
+
+.hero-image {
+  animation: kenBurns 12s ease-out forwards;
+}
+
+/* Calendly embed override */
+.calendly-inline-widget {
+  min-width: 320px;
+  height: 700px;
+}

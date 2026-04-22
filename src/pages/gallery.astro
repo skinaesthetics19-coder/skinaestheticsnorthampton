@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+
+import GalleryGrid from '../components/GalleryGrid.tsx';
+---
+
+<Layout
+  title="Before & After Gallery — Skin Aesthetics Northampton"
+  description="Real results from real clients at Skin Aesthetics Northampton. Browse our before and after gallery for PRP, microneedling, facials and more."
+>
+  <Nav />
+
+  <PageHero
+    title="Real Results"
+    subtitle="Genuine transformations from our clients — achieved with care, expertise, and precision."
+  />
+
+  <section class="py-20 px-6 lg:px-8" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+      <GalleryGrid client:load />
+
+      <!-- Disclaimer -->
+      <p
+        class="mt-12 text-center text-xs leading-relaxed"
+        style="color: var(--warm-grey);"
+      >
+        Results may vary. All images are of real clients with consent. Individual results depend on skin type, lifestyle, and number of treatments.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="py-20 px-6 lg:px-8 text-center"
+    style="background-color: var(--blush-light);"
+  >
+    <div class="max-w-2xl mx-auto reveal">
+      <div class="section-divider"></div>
+      <h2
+        class="text-3xl lg:text-4xl font-light mb-4"
+        style="font-family: var(--font-heading); color: var(--charcoal);"
+      >
+        Ready for your own transformation?
+      </h2>
+      <p class="text-base mb-8" style="color: var(--warm-grey);">
+        Book your free consultation and take the first step towards your best skin.
+      </p>
+      <a
+        href="/book"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+        style="background-color: var(--rose-primary);"
+        onmouseover="this.style.backgroundColor='#b36370'"
+        onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+      >
+        Book a Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,201 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+
+import FAQAccordion from '../components/FAQAccordion.tsx';
+---
+
+<Layout
+  title="Contact Us — Skin Aesthetics Northampton"
+  description="Get in touch with Skin Aesthetics Northampton. Email, Instagram, or use our contact form. Based in Northampton, UK."
+>
+  <Nav />
+
+  <PageHero
+    title="Get In Touch"
+    subtitle="We'd love to hear from you. Reach out with any questions or to arrange your appointment."
+  />
+
+  <section class="py-20 px-6 lg:px-8" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+        <!-- Contact details -->
+        <div class="reveal">
+          <h2
+            class="text-3xl font-light mb-8"
+            style="font-family: var(--font-heading); color: var(--charcoal);"
+          >
+            Contact Information
+          </h2>
+          <ul class="space-y-6">
+            <li class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                style="background-color: var(--blush-light); color: var(--rose-primary);"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-medium mb-1" style="color: var(--charcoal);">Email</p>
+                <a
+                  href="mailto:skinaesthetics19@gmail.com"
+                  class="text-sm transition-colors duration-200"
+                  style="color: var(--rose-primary);"
+                >
+                  skinaesthetics19@gmail.com
+                </a>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                style="background-color: var(--blush-light); color: var(--rose-primary);"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-medium mb-1" style="color: var(--charcoal);">Instagram</p>
+                <a
+                  href="https://www.instagram.com/skin_aesthetic_northampton"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm transition-colors duration-200"
+                  style="color: var(--rose-primary);"
+                >
+                  @skin_aesthetic_northampton
+                </a>
+              </div>
+            </li>
+            <li class="flex items-start gap-4">
+              <div
+                class="w-10 h-10 rounded-full flex items-center justify-center shrink-0 mt-0.5"
+                style="background-color: var(--blush-light); color: var(--rose-primary);"
+              >
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <div>
+                <p class="text-sm font-medium mb-1" style="color: var(--charcoal);">Location</p>
+                <p class="text-sm" style="color: var(--warm-grey);">Northampton, UK</p>
+                <p class="text-xs mt-0.5" style="color: var(--warm-grey);">(Exact address provided on booking confirmation)</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact form -->
+        <div class="reveal reveal-delay-2">
+          <h2
+            class="text-3xl font-light mb-8"
+            style="font-family: var(--font-heading); color: var(--charcoal);"
+          >
+            Send a Message
+          </h2>
+          <form
+            action="mailto:skinaesthetics19@gmail.com"
+            method="POST"
+            enctype="text/plain"
+            class="space-y-5"
+          >
+            <div>
+              <label
+                for="name"
+                class="block text-sm font-medium mb-2"
+                style="color: var(--charcoal);"
+              >
+                Your Name
+              </label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Jane Smith"
+                class="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200"
+                style="border: 1px solid var(--light-grey); color: var(--charcoal); background: white;"
+                onfocus="this.style.borderColor='var(--rose-primary)'; this.style.boxShadow='0 0 0 3px rgba(196,113,122,0.12)'"
+                onblur="this.style.borderColor='var(--light-grey)'; this.style.boxShadow='none'"
+              />
+            </div>
+            <div>
+              <label
+                for="email"
+                class="block text-sm font-medium mb-2"
+                style="color: var(--charcoal);"
+              >
+                Email Address
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="jane@example.com"
+                class="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200"
+                style="border: 1px solid var(--light-grey); color: var(--charcoal); background: white;"
+                onfocus="this.style.borderColor='var(--rose-primary)'; this.style.boxShadow='0 0 0 3px rgba(196,113,122,0.12)'"
+                onblur="this.style.borderColor='var(--light-grey)'; this.style.boxShadow='none'"
+              />
+            </div>
+            <div>
+              <label
+                for="message"
+                class="block text-sm font-medium mb-2"
+                style="color: var(--charcoal);"
+              >
+                Message
+              </label>
+              <textarea
+                id="message"
+                name="message"
+                required
+                rows="5"
+                placeholder="Tell us how we can help..."
+                class="w-full px-4 py-3 rounded-xl text-sm outline-none transition-all duration-200 resize-none"
+                style="border: 1px solid var(--light-grey); color: var(--charcoal); background: white;"
+                onfocus="this.style.borderColor='var(--rose-primary)'; this.style.boxShadow='0 0 0 3px rgba(196,113,122,0.12)'"
+                onblur="this.style.borderColor='var(--light-grey)'; this.style.boxShadow='none'"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+              style="background-color: var(--rose-primary);"
+              onmouseover="this.style.backgroundColor='#b36370'"
+              onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="py-20 px-6 lg:px-8" style="background-color: var(--off-white);">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <div class="section-divider"></div>
+        <h2
+          class="text-3xl lg:text-4xl font-light"
+          style="font-family: var(--font-heading); color: var(--charcoal);"
+        >
+          Frequently Asked Questions
+        </h2>
+      </div>
+      <FAQAccordion client:load />
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

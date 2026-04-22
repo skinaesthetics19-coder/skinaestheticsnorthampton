@@ -1,0 +1,204 @@
+---
+const navLinks = [
+  { href: '/', label: 'Home' },
+  { href: '/services', label: 'Services' },
+  { href: '/about', label: 'About' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/pricing', label: 'Pricing' },
+  { href: '/contact', label: 'Contact' },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<header
+  id="site-nav"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+  style="background: transparent;"
+>
+  <!-- Promo Banner (inside fixed header so it's never obscured) -->
+  <div
+    id="promo-banner"
+    class="promo-shimmer text-white text-sm font-medium tracking-wide"
+  >
+    <div class="relative flex items-center justify-center px-10 py-2.5">
+      <p class="text-center leading-snug">
+        ✨ Enjoy <strong>15% OFF</strong> any treatment &amp; receive a <strong>FREE personalised skin consultation</strong> — <a href="/book" class="underline underline-offset-2 hover:no-underline">Book today</a>
+      </p>
+      <button
+        id="promo-dismiss"
+        aria-label="Dismiss promotional banner"
+        class="absolute right-4 top-1/2 -translate-y-1/2 w-7 h-7 flex items-center justify-center rounded-full transition-opacity duration-150 hover:opacity-100 opacity-80"
+        style="background: rgba(255,255,255,0.25);"
+      >
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Nav row -->
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="flex items-center justify-between h-32">
+      <!-- Logo -->
+      <a href="/" class="flex items-center shrink-0" aria-label="Skin Aesthetics Northampton — Home">
+        <div id="logo-wrap" class="rounded-2xl transition-all duration-300 overflow-hidden">
+          <img
+            src="/Logo.jpg"
+            alt="Skin Aesthetics Northampton"
+            class="h-24 w-auto object-cover block"
+            width="192"
+            height="96"
+          />
+        </div>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden lg:flex items-center gap-8" aria-label="Main navigation">
+        {
+          navLinks.map((link) => (
+            <a
+              href={link.href}
+              class={`nav-link text-sm font-medium tracking-wide transition-colors duration-200 relative
+                ${currentPath === link.href ? 'active' : ''}`}
+              style={currentPath === link.href ? 'color: var(--rose-primary)' : 'color: var(--charcoal)'}
+            >
+              {link.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <!-- CTA + Mobile toggle -->
+      <div class="flex items-center gap-4">
+        <a
+          href="/book"
+          class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+          style="background-color: var(--rose-primary);"
+          onmouseover="this.style.backgroundColor='#b36370'"
+          onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+        >
+          Book Now
+        </a>
+
+        <!-- Mobile hamburger -->
+        <button
+          id="mobile-menu-btn"
+          class="lg:hidden p-2 rounded-md"
+          style="color: var(--charcoal);"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div
+    id="mobile-menu"
+    class="hidden lg:hidden border-t"
+    style="background: white; border-color: var(--light-grey);"
+  >
+    <div class="px-6 py-4 flex flex-col gap-4">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="text-base font-medium py-1 transition-colors duration-200"
+            style={currentPath === link.href ? 'color: var(--rose-primary)' : 'color: var(--charcoal)'}
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <a
+        href="/book"
+        class="inline-flex items-center justify-center px-5 py-2.5 rounded-full text-sm font-medium tracking-wide text-white mt-2"
+        style="background-color: var(--rose-primary);"
+      >
+        Book Now
+      </a>
+    </div>
+  </div>
+</header>
+
+<style>
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background-color: var(--rose-primary);
+    transition: width 0.25s ease;
+  }
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+  .nav-link:hover {
+    color: var(--rose-primary) !important;
+  }
+
+  /* Scrolled state */
+  #site-nav.scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.06);
+  }
+
+  /* Logo pill on transparent nav */
+  #logo-wrap {
+    background: rgba(255, 255, 255, 0.92);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.10);
+  }
+  #site-nav.scrolled #logo-wrap {
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* Hide promo banner once dismissed */
+  #promo-banner.hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  const nav = document.getElementById('site-nav');
+  const mobileBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  // Scroll behaviour
+  function updateNav() {
+    if (window.scrollY > 60) {
+      nav?.classList.add('scrolled');
+    } else {
+      nav?.classList.remove('scrolled');
+    }
+  }
+  updateNav();
+  window.addEventListener('scroll', updateNav, { passive: true });
+
+  // Mobile menu toggle
+  mobileBtn?.addEventListener('click', () => {
+    const isOpen = !mobileMenu?.classList.contains('hidden');
+    mobileMenu?.classList.toggle('hidden');
+    hamburger?.classList.toggle('hidden');
+    closeIcon?.classList.toggle('hidden');
+    mobileBtn.setAttribute('aria-expanded', String(!isOpen));
+  });
+
+  // Promo dismiss
+  document.getElementById('promo-dismiss')?.addEventListener('click', () => {
+    document.getElementById('promo-banner')?.classList.add('hidden');
+  });
+</script>

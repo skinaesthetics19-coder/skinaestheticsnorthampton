@@ -1,0 +1,103 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import PageHero from '../../components/PageHero.astro';
+
+import { categories } from '../../data/treatments';
+---
+
+<Layout
+  title="Our Treatments — Skin Aesthetics Northampton"
+  description="Explore our full range of premium aesthetic treatments in Northampton: PRP, PRF, microneedling, skin boosters, facials, dermaplaning and chemical peels."
+>
+  <Nav />
+
+  <PageHero
+    title="Our Treatments"
+    subtitle="Eight expertly performed treatment categories — each tailored to your individual skin goals."
+  />
+
+  <section class="py-20 px-6 lg:px-8" style="background: white;">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {categories.map((cat, i) => (
+          <article
+            class={`group relative bg-white rounded-2xl overflow-hidden transition-all duration-300 reveal reveal-delay-${(i % 4) + 1}`}
+            style="box-shadow: 0 2px 20px rgba(196,113,122,0.07); border: 1px solid var(--light-grey);"
+          >
+            <!-- Top gradient accent bar -->
+            <div
+              class="h-1 w-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              style="background: linear-gradient(90deg, var(--rose-primary), var(--coral));"
+            ></div>
+            <div class="p-7">
+              <div
+                class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-5"
+                style="background-color: var(--blush-light); color: var(--rose-primary);"
+              >
+                {cat.icon}
+              </div>
+              <h2
+                class="text-xl font-medium mb-2"
+                style="font-family: var(--font-heading); color: var(--charcoal);"
+              >
+                {cat.name}
+              </h2>
+              <p class="text-sm leading-relaxed mb-5" style="color: var(--warm-grey);">
+                {cat.tagline}
+              </p>
+              <div class="flex items-center justify-between">
+                <span
+                  class="text-xs font-medium tracking-wide px-3 py-1 rounded-full"
+                  style="background-color: var(--blush-light); color: var(--rose-primary);"
+                >
+                  From {cat.startingFrom}
+                </span>
+                <a
+                  href={`/services/${cat.slug}`}
+                  class="text-sm font-medium transition-colors duration-200"
+                  style="color: var(--charcoal);"
+                  onmouseover="this.style.color='var(--rose-primary)'"
+                  onmouseout="this.style.color='var(--charcoal)'"
+                >
+                  View →
+                </a>
+              </div>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="py-20 px-6 lg:px-8 text-center"
+    style="background-color: var(--blush-light);"
+  >
+    <div class="max-w-2xl mx-auto reveal">
+      <div class="section-divider"></div>
+      <h2
+        class="text-3xl lg:text-4xl font-light mb-4"
+        style="font-family: var(--font-heading); color: var(--charcoal);"
+      >
+        Not sure which treatment is right for you?
+      </h2>
+      <p class="text-base mb-8" style="color: var(--warm-grey);">
+        Book a free initial consultation and our practitioner will create a personalised treatment plan for your skin.
+      </p>
+      <a
+        href="/book"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+        style="background-color: var(--rose-primary);"
+        onmouseover="this.style.backgroundColor='#b36370'"
+        onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+      >
+        Book a Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

@@ -1,0 +1,31 @@
+---
+---
+<div
+  id="promo-banner"
+  class="promo-shimmer text-white text-sm font-medium tracking-wide relative"
+  style="position: relative; z-index: 60;"
+  role="banner"
+  aria-label="Promotional offer"
+>
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-2.5 flex items-center justify-center">
+    <p class="text-center leading-snug">
+      ✨ Enjoy <strong>15% OFF</strong> any treatment of your choice &amp; receive a <strong>FREE personalised skin consultation</strong> — <a href="/book" class="underline underline-offset-2 hover:no-underline">Book today</a>
+    </p>
+    <button
+      id="promo-dismiss"
+      aria-label="Dismiss offer banner"
+      class="absolute right-4 top-1/2 -translate-y-1/2 w-7 h-7 flex items-center justify-center rounded-full transition-all duration-150"
+      style="background: rgba(255,255,255,0.25); flex-shrink: 0;"
+    >
+      <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  document.getElementById('promo-dismiss')?.addEventListener('click', () => {
+    document.getElementById('promo-banner')?.remove();
+  });
+</script>

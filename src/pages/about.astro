@@ -1,0 +1,171 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import PageHero from '../components/PageHero.astro';
+
+---
+
+<Layout
+  title="About Us — Skin Aesthetics Northampton"
+  description="Meet the team behind Skin Aesthetics Northampton. Fully qualified, insured, and passionate about delivering natural, confidence-enhancing aesthetic treatments."
+>
+  <Nav />
+
+  <PageHero
+    title="About Us"
+    subtitle="The people, values, and philosophy behind Skin Aesthetics Northampton."
+  />
+
+  <!-- Practitioner Bio -->
+  <section class="py-24 px-6 lg:px-8" style="background: white;">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="reveal">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden" style="background-color: var(--blush-light);">
+            <img
+              src="/images/1.jpg"
+              alt="Skin Aesthetics Northampton practitioner"
+              class="w-full h-full object-cover"
+              width="800"
+              height="1000"
+              loading="eager"
+            />
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="section-divider" style="margin-left: 0;"></div>
+          <h2
+            class="text-4xl lg:text-5xl font-light mb-6"
+            style="font-family: var(--font-heading); color: var(--charcoal);"
+          >
+            Meet Your Practitioner
+          </h2>
+          <p class="text-base leading-relaxed mb-4" style="color: var(--warm-grey);">
+            Welcome to Skin Aesthetics Northampton. With a deep passion for aesthetics and a commitment to delivering natural, confidence-enhancing results, our practitioner combines clinical expertise with a warm, personal approach to every treatment.
+          </p>
+          <p class="text-base leading-relaxed mb-4" style="color: var(--warm-grey);">
+            Fully qualified and insured, with ongoing professional development to stay at the forefront of aesthetic medicine — your safety, comfort, and satisfaction are always the top priority.
+          </p>
+          <p class="text-base leading-relaxed mb-8" style="color: var(--warm-grey);">
+            Every client is unique, and every treatment plan is tailored to your individual skin goals. Whether you're looking for subtle enhancement or visible transformation, you're in safe, skilled hands.
+          </p>
+          <a
+            href="/book"
+            class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+            style="background-color: var(--rose-primary);"
+            onmouseover="this.style.backgroundColor='#b36370'"
+            onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+          >
+            Book a Consultation
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qualifications Strip -->
+  <section class="py-16 px-6 lg:px-8" style="background-color: var(--off-white); border-top: 1px solid var(--light-grey); border-bottom: 1px solid var(--light-grey);">
+    <div class="max-w-7xl mx-auto">
+      <h2
+        class="text-center text-2xl lg:text-3xl font-light mb-12 reveal"
+        style="font-family: var(--font-heading); color: var(--charcoal);"
+      >
+        Qualifications & Credentials
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        {[
+          { label: 'Fully Qualified Aesthetics Practitioner', icon: '🎓' },
+          { label: 'Fully Insured Professional', icon: '🛡️' },
+          { label: 'Medical-Grade Training', icon: '⚕️' },
+          { label: 'Continuous Professional Development', icon: '📚' },
+        ].map((item, i) => (
+          <div class={`text-center reveal reveal-delay-${i + 1}`}>
+            <div class="text-4xl mb-3">{item.icon}</div>
+            <p class="text-sm font-medium" style="color: var(--charcoal);">{item.label}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-24 px-6 lg:px-8" style="background: white;">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16 reveal">
+        <div class="section-divider"></div>
+        <h2
+          class="text-4xl lg:text-5xl font-light mb-4"
+          style="font-family: var(--font-heading); color: var(--charcoal);"
+        >
+          Our Philosophy
+        </h2>
+        <p class="text-base max-w-xl mx-auto" style="color: var(--warm-grey);">
+          Three principles that guide every treatment we perform.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          {
+            title: 'Safety First',
+            body: 'Every treatment is performed with the highest standards of hygiene, safety, and clinical care. We only use medical-grade products from reputable suppliers.',
+            icon: '✦',
+          },
+          {
+            title: 'Natural Results',
+            body: 'Our goal is to enhance your natural beauty — not change it. We believe in subtle, thoughtful treatments that help you look and feel your very best.',
+            icon: '◈',
+          },
+          {
+            title: 'Personalised Care',
+            body: 'No two clients are the same. Every treatment plan is tailored to your unique skin, concerns, and goals — with honest, expert guidance at every step.',
+            icon: '◎',
+          },
+        ].map((val, i) => (
+          <div
+            class={`rounded-2xl p-8 text-center reveal reveal-delay-${i + 1}`}
+            style="background-color: var(--blush-light); border: 1px solid var(--blush);"
+          >
+            <div class="text-3xl mb-5" style="color: var(--rose-primary);">{val.icon}</div>
+            <h3
+              class="text-2xl font-medium mb-4"
+              style="font-family: var(--font-heading); color: var(--charcoal);"
+            >
+              {val.title}
+            </h3>
+            <p class="text-sm leading-relaxed" style="color: var(--warm-grey);">{val.body}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section
+    class="py-20 px-6 lg:px-8 text-center"
+    style="background: linear-gradient(135deg, var(--rose-primary) 0%, var(--coral) 100%);"
+  >
+    <div class="max-w-2xl mx-auto reveal">
+      <h2
+        class="text-3xl lg:text-4xl font-light text-white mb-4"
+        style="font-family: var(--font-heading);"
+      >
+        Ready to begin your skin journey?
+      </h2>
+      <p class="text-white opacity-90 mb-8">
+        Book your free initial consultation today — no obligation, just expert advice.
+      </p>
+      <a
+        href="/book"
+        class="inline-flex items-center justify-center px-10 py-4 rounded-full text-sm font-medium tracking-wide bg-white transition-all duration-200"
+        style="color: var(--rose-primary);"
+        onmouseover="this.style.background='var(--off-white)'"
+        onmouseout="this.style.background='white'"
+      >
+        Book a Free Consultation
+      </a>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
