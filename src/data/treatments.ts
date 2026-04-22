@@ -21,7 +21,7 @@ export const categories: TreatmentCategory[] = [
   {
     slug: 'consultation',
     name: 'Skin Consultation',
-    tagline: 'Your journey starts here — completely free.',
+    tagline: 'Your journey starts here, completely free.',
     description: 'A personalised assessment of your skin to guide the perfect treatment plan.',
     longDescription:
       'Our initial skin consultation is completely free and gives you the opportunity to discuss your skin concerns with our qualified practitioner. We assess your skin, listen to your goals, and recommend a bespoke treatment plan tailored to your needs — with no pressure and no obligation.',
@@ -47,7 +47,7 @@ export const categories: TreatmentCategory[] = [
   },
   {
     slug: 'prp',
-    name: 'PRP — Platelet-Rich Plasma',
+    name: 'PRP: Platelet-Rich Plasma',
     tagline: 'Natural rejuvenation using your body\'s own growth factors.',
     description: 'Harness your body\'s natural healing power to rejuvenate skin and stimulate hair growth.',
     longDescription:
@@ -84,9 +84,9 @@ export const categories: TreatmentCategory[] = [
   },
   {
     slug: 'prf',
-    name: 'PRF — Platelet-Rich Fibrin',
+    name: 'PRF: Platelet-Rich Fibrin',
     tagline: 'Advanced regeneration for deeper repair and longer-lasting results.',
-    description: 'The next evolution of PRP — denser growth factors for superior skin regeneration.',
+    description: 'The next evolution of PRP, with denser growth factors for superior skin regeneration.',
     longDescription:
       'Platelet-Rich Fibrin (PRF) is an advanced evolution of PRP. Processed without anticoagulants, PRF forms a fibrin matrix that releases growth factors slowly over time — delivering longer-lasting, more natural-looking results. It is particularly effective for delicate areas like the under-eyes and neck.',
     startingFrom: '£120',
