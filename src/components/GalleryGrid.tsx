@@ -11,7 +11,7 @@ interface GalleryItem {
 // Phase 1 placeholder items — real photos replace these in Phase 2
 const items: GalleryItem[] = [
   { id: 1, category: 'PRP', label: 'Full Face PRP Rejuvenation' },
-  { id: 2, category: 'Microneedling', label: 'Microneedling — Texture Improvement' },
+  { id: 2, category: 'Microneedling', label: 'Microneedling: Texture Improvement' },
   { id: 3, category: 'Facials', label: 'Glass Skin Facial' },
   { id: 4, category: 'Skin Boosters', label: 'Profhilo Treatment' },
   { id: 5, category: 'Dermaplaning', label: 'Dermaplaning + Peel' },
@@ -20,8 +20,8 @@ const items: GalleryItem[] = [
   { id: 8, category: 'PRP', label: 'PRP Scalp (Hair Growth)' },
   { id: 9, category: 'Microneedling', label: 'Microneedling + PRP' },
   { id: 10, category: 'Facials', label: 'Deep Cleanse Facial' },
-  { id: 11, category: 'Chemical Peels', label: 'Chemical Peel — Pigmentation' },
-  { id: 12, category: 'Skin Boosters', label: 'Skin Booster — Hydration' },
+  { id: 11, category: 'Chemical Peels', label: 'Chemical Peel: Pigmentation' },
+  { id: 12, category: 'Skin Boosters', label: 'Skin Booster: Hydration' },
 ];
 
 const gradients = [
