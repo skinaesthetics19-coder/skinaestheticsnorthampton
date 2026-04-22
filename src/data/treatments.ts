@@ -24,7 +24,7 @@ export const categories: TreatmentCategory[] = [
     tagline: 'Your journey starts here, completely free.',
     description: 'A personalised assessment of your skin to guide the perfect treatment plan.',
     longDescription:
-      'Our initial skin consultation is completely free and gives you the opportunity to discuss your skin concerns with our qualified practitioner. We assess your skin, listen to your goals, and recommend a bespoke treatment plan tailored to your needs — with no pressure and no obligation.',
+      'Our initial skin consultation is completely free and gives you the opportunity to discuss your skin concerns with our qualified practitioner. We assess your skin, listen to your goals, and recommend a bespoke treatment plan tailored to your needs. No pressure, no obligation.',
     startingFrom: 'FREE',
     icon: '✦',
     treatments: [{ name: 'Initial Skin Consultation', price: 'FREE' }],
@@ -32,7 +32,7 @@ export const categories: TreatmentCategory[] = [
       'A relaxed 30-minute conversation about your skin goals',
       'Skin analysis by our qualified practitioner',
       'Personalised treatment recommendations',
-      'No obligation — just expert, honest advice',
+      'Expert, honest advice with no obligation',
     ],
     faqs: [
       {
@@ -88,7 +88,7 @@ export const categories: TreatmentCategory[] = [
     tagline: 'Advanced regeneration for deeper repair and longer-lasting results.',
     description: 'The next evolution of PRP, with denser growth factors for superior skin regeneration.',
     longDescription:
-      'Platelet-Rich Fibrin (PRF) is an advanced evolution of PRP. Processed without anticoagulants, PRF forms a fibrin matrix that releases growth factors slowly over time — delivering longer-lasting, more natural-looking results. It is particularly effective for delicate areas like the under-eyes and neck.',
+      'Platelet-Rich Fibrin (PRF) is an advanced evolution of PRP. Processed without anticoagulants, PRF forms a fibrin matrix that releases growth factors slowly over time, delivering longer-lasting and more natural-looking results. It is particularly effective for delicate areas like the under-eyes and neck.',
     startingFrom: '£120',
     icon: '◇',
     treatments: [
@@ -98,7 +98,7 @@ export const categories: TreatmentCategory[] = [
     whatToExpect: [
       'Blood is drawn and spun using a specialist protocol',
       'PRF is carefully injected into the target area',
-      'Some bruising or swelling may occur — this is normal',
+      'Some mild bruising or swelling may occur and will settle quickly',
       'Results build gradually over 4–8 weeks',
     ],
     faqs: [
@@ -108,7 +108,7 @@ export const categories: TreatmentCategory[] = [
       },
       {
         question: 'Is PRF good for under-eye hollows?',
-        answer: 'Yes — PRF is one of the most natural options for the delicate under-eye area, adding volume and improving skin quality without the risk of complications associated with some fillers.',
+        answer: 'Yes. PRF is one of the most natural options for the delicate under-eye area, adding volume and improving skin quality without the risks associated with some dermal fillers.',
       },
     ],
   },
@@ -184,7 +184,7 @@ export const categories: TreatmentCategory[] = [
     tagline: 'Relax, refresh, and restore your glow.',
     description: 'Luxurious, results-driven facials tailored to your skin\'s individual needs.',
     longDescription:
-      'Our carefully curated facials combine the latest professional techniques with premium skincare products. Each facial is tailored to your skin\'s unique needs — whether you\'re looking for deep cleansing, brightening, or anti-ageing results — leaving you with visibly improved, radiant skin.',
+      'Our carefully curated facials combine the latest professional techniques with premium skincare products. Each facial is fully tailored to your skin, whether you are looking for deep cleansing, brightening, or anti-ageing results. You will leave with visibly improved, radiant skin.',
     startingFrom: '£75',
     icon: '✿',
     treatments: [
@@ -202,7 +202,7 @@ export const categories: TreatmentCategory[] = [
     faqs: [
       {
         question: 'What is the Glass Skin Facial?',
-        answer: 'The Glass Skin Facial is our signature treatment designed to achieve the coveted "glass skin" effect — ultra-smooth, poreless, and luminous. It combines multiple steps of exfoliation, hydration, and brightening.',
+        answer: 'The Glass Skin Facial is our signature treatment designed to achieve the coveted "glass skin" look: ultra-smooth, poreless, and luminous. It combines multiple steps of exfoliation, hydration, and brightening for a truly radiant finish.',
       },
       {
         question: 'How often should I have a facial?',
@@ -229,7 +229,7 @@ export const categories: TreatmentCategory[] = [
       'Skin is thoroughly cleansed and dried',
       'A sterile surgical blade is used with precise, feathering strokes',
       'A soothing serum and moisturiser are applied post-treatment',
-      'No downtime — skin looks immediately brighter and smoother',
+      'No downtime. Skin looks immediately brighter and smoother',
       'Makeup applies like a dream afterwards',
     ],
     faqs: [
