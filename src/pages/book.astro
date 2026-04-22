@@ -3,7 +3,6 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PageHero from '../components/PageHero.astro';
-
 ---
 
 <Layout
@@ -14,7 +13,7 @@ import PageHero from '../components/PageHero.astro';
 
   <PageHero
     title="Book Your Appointment"
-    subtitle="Secure your treatment online — quick, easy, and available 24/7."
+    subtitle="Secure your treatment online. Quick, easy, and available 24/7."
   />
 
   <section class="py-16 px-6 lg:px-8" style="background: white;">
@@ -22,66 +21,21 @@ import PageHero from '../components/PageHero.astro';
       <!-- Intro -->
       <div class="text-center mb-12 reveal">
         <p class="text-base leading-relaxed max-w-2xl mx-auto" style="color: var(--warm-grey);">
-          Use the booking calendar below to choose your treatment and preferred time. Not sure which treatment to book? Select a <strong>Free Skin Consultation</strong> and our practitioner will guide you to the perfect plan.
+          Use the booking calendar below to choose your preferred time. Not sure which treatment to book? Select a <strong>Free Skin Consultation</strong> and our practitioner will guide you to the perfect plan.
         </p>
       </div>
 
-      <!-- Calendly embed -->
+      <!-- Calendly inline embed -->
       <div
         class="rounded-2xl overflow-hidden reveal"
         style="border: 1px solid var(--light-grey); box-shadow: 0 4px 32px rgba(196,113,122,0.08);"
       >
-        <!-- Placeholder until Calendly URL is provided (Phase 2) -->
         <div
-          class="flex flex-col items-center justify-center py-24 px-8 text-center"
-          style="background-color: var(--blush-light);"
-        >
-          <div class="text-5xl mb-6" style="color: var(--rose-primary);">📅</div>
-          <h3
-            class="text-2xl font-light mb-3"
-            style="font-family: var(--font-heading); color: var(--charcoal);"
-          >
-            Online Booking Coming Soon
-          </h3>
-          <p class="text-base mb-6 max-w-md" style="color: var(--warm-grey);">
-            Our online booking calendar will be live shortly. In the meantime, please get in touch directly to schedule your appointment.
-          </p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a
-              href="mailto:skinaesthetics19@gmail.com"
-              class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
-              style="background-color: var(--rose-primary);"
-              onmouseover="this.style.backgroundColor='#b36370'"
-              onmouseout="this.style.backgroundColor='var(--rose-primary)'"
-            >
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-              </svg>
-              Email to Book
-            </a>
-            <a
-              href="https://www.instagram.com/skin_aesthetic_northampton"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-sm font-medium tracking-wide transition-all duration-200"
-              style="border: 1.5px solid var(--rose-primary); color: var(--rose-primary);"
-              onmouseover="this.style.background='var(--rose-primary)'; this.style.color='white';"
-              onmouseout="this.style.background='transparent'; this.style.color='var(--rose-primary)';"
-            >
-              DM on Instagram
-            </a>
-          </div>
-        </div>
-
-        <!--
-          PHASE 2: Replace the placeholder above with:
-          <div
-            class="calendly-inline-widget"
-            data-url="https://calendly.com/YOUR_ACCOUNT/YOUR_EVENT"
-            style="min-width:320px;height:700px;"
-          ></div>
-          <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        -->
+          class="calendly-inline-widget"
+          data-url="https://calendly.com/skinaesthetics19/30min?hide_gdpr_banner=1&primary_color=c4717a"
+          style="min-width:320px;height:700px;"
+        ></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
 
       <!-- Contact alternative -->
