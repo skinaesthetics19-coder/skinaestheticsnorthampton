@@ -10,7 +10,7 @@ interface Props {
 const {
   title,
   description = 'Skin Aesthetics Northampton — premium aesthetic treatments in Northampton. PRP, microneedling, facials, chemical peels and more. Book your free consultation today.',
-  ogImage = '/Logo.jpg',
+  ogImage = '/Logo.png',
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -21,7 +21,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/jpeg" href="/Logo.jpg" />
+    <link rel="icon" type="image/png" href="/Logo.png" />
     <meta name="generator" content={Astro.generator} />
 
     <!-- SEO -->
