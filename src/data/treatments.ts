@@ -26,7 +26,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Our initial skin consultation is completely free and gives you the opportunity to discuss your skin concerns with our qualified practitioner. We assess your skin, listen to your goals, and recommend a bespoke treatment plan tailored to your needs. No pressure, no obligation.',
     startingFrom: 'FREE',
-    icon: '✦',
+    icon: 'sparkle',
     treatments: [{ name: 'Initial Skin Consultation', price: 'FREE' }],
     whatToExpect: [
       'A relaxed 30-minute conversation about your skin goals',
@@ -53,7 +53,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Platelet-Rich Plasma (PRP) therapy uses a small sample of your own blood, which is spun in a centrifuge to concentrate the platelets. These growth-factor-rich platelets are then injected or micro-needled back into the treatment area to stimulate collagen production, improve skin texture, and accelerate natural healing.',
     startingFrom: '£120',
-    icon: '◈',
+    icon: 'diamond',
     treatments: [
       { name: 'Full Face Skin Rejuvenation', price: '£180' },
       { name: 'PRP Scalp (Hair Growth)', price: '£150' },
@@ -90,7 +90,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Platelet-Rich Fibrin (PRF) is an advanced evolution of PRP. Processed without anticoagulants, PRF forms a fibrin matrix that releases growth factors slowly over time, delivering longer-lasting and more natural-looking results. It is particularly effective for delicate areas like the under-eyes and neck.',
     startingFrom: '£120',
-    icon: '◇',
+    icon: 'rhombus',
     treatments: [
       { name: 'Under Eyes / Smile Lines', price: '£150' },
       { name: 'Neck (Horizontal Lines Reduction)', price: '£120' },
@@ -120,7 +120,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Microneedling (also known as collagen induction therapy) uses a specialist device with ultra-fine needles to create controlled micro-channels in the skin. This triggers the body\'s natural healing response, stimulating collagen and elastin production to improve texture, tone, fine lines, and scarring.',
     startingFrom: '£80',
-    icon: '◉',
+    icon: 'circle-dot',
     treatments: [
       { name: 'Microneedling (starts from)', price: '£80' },
       { name: 'Microneedling + Jelly Mask', price: '£100' },
@@ -155,7 +155,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Skin boosters are injectable hyaluronic acid treatments that deeply hydrate the skin from within, improving elasticity, firmness, and radiance. Unlike dermal fillers, they spread evenly throughout the skin to restore overall quality rather than adding volume. Profhilo is our gold-standard option.',
     startingFrom: '£80',
-    icon: '◎',
+    icon: 'circle-rings',
     treatments: [
       { name: 'Skin Boosters (from)', price: '£80' },
       { name: 'Profhilo', price: '£180' },
@@ -186,7 +186,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Our carefully curated facials combine the latest professional techniques with premium skincare products. Each facial is fully tailored to your skin, whether you are looking for deep cleansing, brightening, or anti-ageing results. You will leave with visibly improved, radiant skin.',
     startingFrom: '£75',
-    icon: '✿',
+    icon: 'flower',
     treatments: [
       { name: 'Deep Cleanse Facial with Steam', price: '£75' },
       { name: 'Dermaplane Facial', price: '£110' },
@@ -218,7 +218,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Dermaplaning is a safe, non-invasive exfoliation treatment that uses a sterile surgical scalpel to gently remove dead skin cells and vellus hair (peach fuzz) from the surface of the skin. The result is instantly smoother, brighter skin with improved product absorption. It\'s suitable for most skin types.',
     startingFrom: '£50',
-    icon: '❋',
+    icon: 'leaf',
     treatments: [
       { name: 'Dermaplaning', price: '£50' },
       { name: 'Dermaplaning + Enzyme Peel', price: '£55' },
@@ -251,7 +251,7 @@ export const categories: TreatmentCategory[] = [
     longDescription:
       'Chemical peels use carefully selected acids to exfoliate the skin at a deeper level, stimulating cell renewal and targeting a wide range of concerns including pigmentation, acne, fine lines, and uneven texture. Our practitioner selects the appropriate peel strength for your skin type and concerns.',
     startingFrom: '£75',
-    icon: '✺',
+    icon: 'sun-burst',
     treatments: [
       { name: 'Chemical Peel', price: '£75' },
       { name: 'BioRePeel', price: '£90' },

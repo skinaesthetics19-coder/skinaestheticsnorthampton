@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import Icon from '../components/Icon.astro';
 
 import { featuredCategories } from '../data/treatments';
 ---
@@ -138,10 +139,10 @@ import { featuredCategories } from '../data/treatments';
               style="box-shadow: 0 2px 16px rgba(196,113,122,0.08); border: 1px solid var(--light-grey);"
             >
               <div
-                class="w-12 h-12 rounded-full flex items-center justify-center text-xl mb-5"
+                class="w-12 h-12 rounded-full flex items-center justify-center mb-5"
                 style="background-color: var(--blush-light); color: var(--rose-primary);"
               >
-                {cat.icon}
+                <Icon name={cat.icon} class="w-6 h-6" />
               </div>
               <h3
                 class="text-xl font-medium mb-2"
@@ -222,10 +223,10 @@ import { featuredCategories } from '../data/treatments';
           >
             Your Practitioner
           </h2>
-          <p class="text-base leading-relaxed mb-4" style="color: var(--warm-grey);">
+          <p class="text-base leading-relaxed mb-4 text-justify" style="color: var(--warm-grey);">
             With over 16 years of medical experience, I combine advanced clinical knowledge with a genuine passion for aesthetic medicine to help clients look and feel their absolute best.
           </p>
-          <p class="text-base leading-relaxed mb-8" style="color: var(--warm-grey);">
+          <p class="text-base leading-relaxed mb-8 text-justify" style="color: var(--warm-grey);">
             My approach is centred around enhancing your natural beauty, delivering refined, confidence-boosting results that never look overdone. Every treatment is performed with the highest standards of safety, care, and professionalism.
           </p>
           <a
@@ -267,7 +268,9 @@ import { featuredCategories } from '../data/treatments';
               style="background: linear-gradient(135deg, var(--blush) 0%, var(--blush-light) 100%);"
             >
               <div class="text-center px-6">
-                <div class="text-4xl mb-3" style="color: var(--rose-primary);">✦</div>
+                <svg class="w-10 h-10 mx-auto mb-3" viewBox="0 0 24 24" fill="currentColor" style="color: var(--rose-primary);" aria-hidden="true">
+                  <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
+                </svg>
                 <p class="text-sm font-medium" style="color: var(--warm-grey); font-family: var(--font-body);">
                   Before &amp; After
                 </p>

@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
+import Icon from '../../components/Icon.astro';
 
 import { categories, getCategoryBySlug } from '../../data/treatments';
 
@@ -48,10 +49,10 @@ if (!category) {
       </a>
       <div class="section-divider" style="margin-left: 0;"></div>
       <div
-        class="inline-flex items-center justify-center w-16 h-16 rounded-full text-2xl mb-6"
+        class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
         style="background-color: var(--blush-light); color: var(--rose-primary);"
       >
-        {category.icon}
+        <Icon name={category.icon} class="w-8 h-8" />
       </div>
       <h1
         class="text-5xl lg:text-6xl font-light leading-tight mb-4"
@@ -85,7 +86,7 @@ if (!category) {
           >
             Treatment Overview
           </h2>
-          <p class="text-base leading-relaxed" style="color: var(--warm-grey);">
+          <p class="text-base leading-relaxed text-justify" style="color: var(--warm-grey);">
             {category.longDescription}
           </p>
         </div>
@@ -103,7 +104,9 @@ if (!category) {
             <ul class="space-y-3">
               {category.whatToExpect.map((step) => (
                 <li class="flex items-start gap-3 text-sm" style="color: var(--warm-grey);">
-                  <span class="mt-0.5 shrink-0 text-xs" style="color: var(--rose-primary);">✦</span>
+                  <svg class="mt-1 shrink-0 w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" style="color: var(--rose-primary);" aria-hidden="true">
+                    <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
+                  </svg>
                   {step}
                 </li>
               ))}

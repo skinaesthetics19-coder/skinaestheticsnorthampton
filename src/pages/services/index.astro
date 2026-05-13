@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import Nav from '../../components/Nav.astro';
 import Footer from '../../components/Footer.astro';
 import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
 
 import { categories } from '../../data/treatments';
 ---
@@ -33,10 +34,10 @@ import { categories } from '../../data/treatments';
             ></div>
             <div class="p-7">
               <div
-                class="w-14 h-14 rounded-full flex items-center justify-center text-2xl mb-5"
+                class="w-14 h-14 rounded-full flex items-center justify-center mb-5"
                 style="background-color: var(--blush-light); color: var(--rose-primary);"
               >
-                {cat.icon}
+                <Icon name={cat.icon} class="w-7 h-7" />
               </div>
               <h2
                 class="text-xl font-medium mb-2"

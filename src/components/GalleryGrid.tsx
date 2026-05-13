@@ -86,7 +86,9 @@ export default function GalleryGrid() {
               }}
             >
               <div className="text-center px-6">
-                <div className="text-3xl mb-2" style={{ color: 'var(--rose-primary)' }}>✦</div>
+                <svg className="w-8 h-8 mx-auto mb-2" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--rose-primary)' }} aria-hidden="true">
+                  <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
+                </svg>
                 <p className="text-xs font-medium" style={{ color: 'var(--warm-grey)' }}>
                   Before &amp; After
                 </p>
@@ -135,7 +137,9 @@ export default function GalleryGrid() {
               }}
             >
               <div className="text-center px-8">
-                <div className="text-5xl mb-3" style={{ color: 'var(--rose-primary)' }}>✦</div>
+                <svg className="w-12 h-12 mx-auto mb-3" viewBox="0 0 24 24" fill="currentColor" style={{ color: 'var(--rose-primary)' }} aria-hidden="true">
+                  <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
+                </svg>
                 <p className="font-medium" style={{ color: 'var(--charcoal)', fontFamily: 'var(--font-heading)', fontSize: '1.2rem' }}>
                   {lightbox.label}
                 </p>

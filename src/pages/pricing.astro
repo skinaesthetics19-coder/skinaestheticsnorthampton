@@ -3,6 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
 
 import { categories } from '../data/treatments';
 ---
@@ -23,8 +24,11 @@ import { categories } from '../data/treatments';
     class="py-6 px-6 text-center"
     style="background-color: var(--blush-light); border-bottom: 1px solid var(--blush);"
   >
-    <p class="text-base font-medium" style="color: var(--charcoal); font-family: var(--font-heading);">
-      ✨ Enjoy <span style="color: var(--rose-primary);">15% OFF</span> any treatment + <span style="color: var(--rose-primary);">FREE</span> skin consultation — <a href="/book" style="color: var(--rose-primary);" class="underline underline-offset-2">Book today</a>
+    <p class="text-base font-medium flex items-center justify-center gap-2 flex-wrap" style="color: var(--charcoal); font-family: var(--font-heading);">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style="color: var(--rose-primary);" aria-hidden="true">
+        <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
+      </svg>
+      <span>Enjoy <span style="color: var(--rose-primary);">15% OFF</span> any treatment + <span style="color: var(--rose-primary);">FREE</span> skin consultation. <a href="/book" style="color: var(--rose-primary);" class="underline underline-offset-2">Book today</a></span>
     </p>
   </div>
 
@@ -34,10 +38,10 @@ import { categories } from '../data/treatments';
         <div class={`reveal reveal-delay-${(ci % 3) + 1}`}>
           <div class="flex items-center gap-3 mb-4">
             <div
-              class="w-10 h-10 rounded-full flex items-center justify-center text-lg shrink-0"
+              class="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
               style="background-color: var(--blush-light); color: var(--rose-primary);"
             >
-              {cat.icon}
+              <Icon name={cat.icon} class="w-5 h-5" />
             </div>
             <div>
               <h2

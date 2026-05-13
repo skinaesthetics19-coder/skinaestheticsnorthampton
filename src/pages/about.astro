@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import PageHero from '../components/PageHero.astro';
-
+import Icon from '../components/Icon.astro';
 ---
 
 <Layout
@@ -47,13 +47,13 @@ import PageHero from '../components/PageHero.astro';
           >
             Your Practitioner
           </h2>
-          <p class="text-base leading-relaxed mb-4" style="color: var(--warm-grey);">
+          <p class="text-base leading-relaxed mb-4 text-justify" style="color: var(--warm-grey);">
             With over 16 years of medical experience, I combine advanced clinical knowledge with a genuine passion for aesthetic medicine to help clients look and feel their absolute best. My approach is centred around enhancing your natural beauty, delivering refined, confidence-boosting results that never look overdone.
           </p>
-          <p class="text-base leading-relaxed mb-4" style="color: var(--warm-grey);">
+          <p class="text-base leading-relaxed mb-4 text-justify" style="color: var(--warm-grey);">
             Every treatment is performed with the highest standards of safety, care, and professionalism. Fully qualified, insured, and committed to ongoing training, I stay at the forefront of the latest aesthetic techniques to ensure you receive the most effective and trusted treatments available.
           </p>
-          <p class="text-base leading-relaxed mb-4" style="color: var(--warm-grey);">
+          <p class="text-base leading-relaxed mb-4 text-justify" style="color: var(--warm-grey);">
             I believe aesthetics should be personal. That's why every consultation and treatment plan is carefully tailored to your individual features, skin concerns, and goals. Whether you're seeking subtle rejuvenation or a more noticeable transformation, you can feel confident knowing you are in experienced, skilled, and caring hands.
           </p>
           <p class="text-base leading-relaxed mb-2 italic" style="color: var(--charcoal); font-family: var(--font-heading); font-size: 1.15rem;">
@@ -87,13 +87,15 @@ import PageHero from '../components/PageHero.astro';
       </h2>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
         {[
-          { label: 'Fully Qualified Aesthetics Practitioner', icon: '🎓' },
-          { label: 'Fully Insured Professional', icon: '🛡️' },
-          { label: 'Medical-Grade Training', icon: '⚕️' },
-          { label: 'Continuous Professional Development', icon: '📚' },
+          { label: 'Fully Qualified Aesthetics Practitioner', icon: 'graduate' },
+          { label: 'Fully Insured Professional', icon: 'shield' },
+          { label: 'Medical-Grade Training', icon: 'medical' },
+          { label: 'Continuous Professional Development', icon: 'book' },
         ].map((item, i) => (
           <div class={`text-center reveal reveal-delay-${i + 1}`}>
-            <div class="text-4xl mb-3">{item.icon}</div>
+            <div class="flex justify-center mb-3" style="color: var(--rose-primary);">
+              <Icon name={item.icon} class="w-10 h-10" />
+            </div>
             <p class="text-sm font-medium" style="color: var(--charcoal);">{item.label}</p>
           </div>
         ))}
@@ -121,24 +123,26 @@ import PageHero from '../components/PageHero.astro';
           {
             title: 'Safety First',
             body: 'Every treatment is performed with the highest standards of hygiene, safety, and clinical care. We only use medical-grade products from reputable suppliers.',
-            icon: '✦',
+            icon: 'shield',
           },
           {
             title: 'Natural Results',
             body: 'Our goal is to enhance your natural beauty, not change it. We believe in subtle, thoughtful treatments that help you look and feel your very best.',
-            icon: '◈',
+            icon: 'sparkle',
           },
           {
             title: 'Personalised Care',
             body: 'No two clients are the same. Every treatment plan is tailored to your unique skin, concerns, and goals, with honest, expert guidance at every step.',
-            icon: '◎',
+            icon: 'circle-rings',
           },
         ].map((val, i) => (
           <div
             class={`rounded-2xl p-8 text-center reveal reveal-delay-${i + 1}`}
             style="background-color: var(--blush-light); border: 1px solid var(--blush);"
           >
-            <div class="text-3xl mb-5" style="color: var(--rose-primary);">{val.icon}</div>
+            <div class="flex justify-center mb-5" style="color: var(--rose-primary);">
+              <Icon name={val.icon} class="w-10 h-10" />
+            </div>
             <h3
               class="text-2xl font-medium mb-4"
               style="font-family: var(--font-heading); color: var(--charcoal);"

@@ -22,8 +22,11 @@ const currentPath = Astro.url.pathname;
     class="promo-shimmer text-white text-sm font-medium tracking-wide"
   >
     <div class="relative flex items-center justify-center px-10 py-2.5">
-      <p class="text-center leading-snug">
-        ✨ Enjoy <strong>15% OFF</strong> any treatment &amp; receive a <strong>FREE personalised skin consultation</strong> — <a href="/book" class="underline underline-offset-2 hover:no-underline">Book today</a>
+      <p class="text-center leading-snug flex items-center justify-center gap-2 flex-wrap">
+        <svg class="w-4 h-4 inline-block" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+          <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" fill="currentColor" />
+        </svg>
+        <span>Enjoy <strong>15% OFF</strong> any treatment &amp; receive a <strong>FREE personalised skin consultation</strong>. <a href="/book" class="underline underline-offset-2 hover:no-underline">Book today</a></span>
       </p>
       <button
         id="promo-dismiss"
