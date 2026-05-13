@@ -65,7 +65,7 @@ export default function GalleryGrid() {
             className="break-inside-avoid rounded-2xl overflow-hidden cursor-pointer group"
             style={{
               border: '1px solid var(--light-grey)',
-              boxShadow: '0 2px 16px rgba(196,113,122,0.07)',
+              boxShadow: '0 2px 16px rgba(92,58,30,0.07)',
             }}
             onClick={() => setLightbox(item)}
             role="button"

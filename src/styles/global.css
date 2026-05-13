@@ -2,35 +2,53 @@
 @import "tailwindcss";
 
 @theme {
-  --color-rose-primary: #C4717A;
-  --color-rose-deep: #A85761;
-  --color-coral: #D4856A;
-  --color-blush: #E8B4A8;
-  --color-blush-light: #F5E6E0;
-  --color-gold-accent: #C9A84C;
-  --color-off-white: #FAF8F5;
+  /* New brown palette — derived from logo */
+  --color-brown-primary: #5C3A1E;
+  --color-brown-deep: #3F2611;
+  --color-caramel: #A8825A;
+  --color-tan: #C7B299;
+  --color-cream: #F5EEE6;
+  --color-ivory: #FAF7F2;
+  --color-off-white: #FAF7F2;
   --color-charcoal: #111111;
   --color-body-text: #1F1F1F;
   --color-warm-grey: #2A2A2A;
-  --color-light-grey: #EDE8E4;
+  --color-light-grey: #EAE3D9;
+
+  /* Legacy rose tokens kept as aliases (now mapped to brown) for compatibility */
+  --color-rose-primary: #5C3A1E;
+  --color-rose-deep: #3F2611;
+  --color-coral: #A8825A;
+  --color-blush: #C7B299;
+  --color-blush-light: #F5EEE6;
+  --color-gold-accent: #A8825A;
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
 :root {
-  --rose-primary: #C4717A;
-  --rose-deep: #A85761;
-  --coral: #D4856A;
-  --blush: #E8B4A8;
-  --blush-light: #F5E6E0;
-  --gold-accent: #C9A84C;
+  /* New brown palette */
+  --brown-primary: #5C3A1E;
+  --brown-deep: #3F2611;
+  --caramel: #A8825A;
+  --tan: #C7B299;
+  --cream: #F5EEE6;
+  --ivory: #FAF7F2;
   --white: #FFFFFF;
-  --off-white: #FAF8F5;
+  --off-white: #FAF7F2;
   --charcoal: #111111;
   --body-text: #1F1F1F;
   --warm-grey: #2A2A2A;
-  --light-grey: #EDE8E4;
+  --light-grey: #EAE3D9;
+
+  /* Legacy rose tokens remapped to brown for seamless updates */
+  --rose-primary: #5C3A1E;
+  --rose-deep: #3F2611;
+  --coral: #A8825A;
+  --blush: #C7B299;
+  --blush-light: #F5EEE6;
+  --gold-accent: #A8825A;
 }
 
 *, *::before, *::after {
@@ -67,7 +85,7 @@ p {
   align-items: center;
   justify-content: center;
   padding: 0.9rem 2rem;
-  background-color: var(--rose-primary);
+  background-color: var(--brown-primary);
   color: white;
   font-size: 0.875rem;
   font-weight: 500;
@@ -78,7 +96,7 @@ p {
   cursor: pointer;
 }
 .btn-primary:hover {
-  background-color: var(--rose-deep);
+  background-color: var(--brown-deep);
 }
 
 /* Ghost / secondary button */
@@ -88,17 +106,17 @@ p {
   justify-content: center;
   padding: 0.9rem 2rem;
   background-color: transparent;
-  color: var(--rose-primary);
+  color: var(--brown-primary);
   font-size: 0.875rem;
   font-weight: 500;
   letter-spacing: 0.05em;
-  border: 1.5px solid var(--rose-primary);
+  border: 1.5px solid var(--brown-primary);
   border-radius: 0.5rem;
   transition: background-color 0.2s ease, color 0.2s ease;
   cursor: pointer;
 }
 .btn-ghost:hover {
-  background-color: var(--rose-primary);
+  background-color: var(--brown-primary);
   color: white;
 }
 
@@ -132,7 +150,7 @@ p {
 .section-divider {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--rose-primary), var(--coral));
+  background: linear-gradient(90deg, var(--brown-primary), var(--caramel));
   margin: 0 auto 1.5rem;
   border-radius: 2px;
 }
@@ -144,9 +162,9 @@ p {
 }
 
 .promo-shimmer {
-  background: linear-gradient(90deg, var(--rose-primary) 0%, var(--coral) 30%, #e08090 50%, var(--coral) 70%, var(--rose-primary) 100%);
+  background: linear-gradient(90deg, var(--brown-primary) 0%, var(--caramel) 50%, var(--brown-primary) 100%);
   background-size: 200% auto;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 6s linear infinite;
 }
 
 /* Ken Burns hero */
