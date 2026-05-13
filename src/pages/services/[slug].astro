@@ -65,9 +65,9 @@ if (!category) {
       </p>
       <a
         href="/book"
-        class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+        class="inline-flex items-center justify-center px-8 py-4 rounded-lg text-sm font-medium tracking-wide text-white transition-all duration-200"
         style="background-color: var(--rose-primary);"
-        onmouseover="this.style.backgroundColor='#b36370'"
+        onmouseover="this.style.backgroundColor='var(--rose-deep)'"
         onmouseout="this.style.backgroundColor='var(--rose-primary)'"
       >
         Book This Treatment
@@ -148,9 +148,9 @@ if (!category) {
       <div class="mt-8 text-center reveal">
         <a
           href="/book"
-          class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide text-white transition-all duration-200"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg text-sm font-medium tracking-wide text-white transition-all duration-200"
           style="background-color: var(--rose-primary);"
-          onmouseover="this.style.backgroundColor='#b36370'"
+          onmouseover="this.style.backgroundColor='var(--rose-deep)'"
           onmouseout="this.style.backgroundColor='var(--rose-primary)'"
         >
           Book Now
@@ -203,34 +203,35 @@ if (!category) {
   <!-- Bottom CTA -->
   <section
     class="py-20 px-6 lg:px-8 text-center"
-    style="background: linear-gradient(135deg, var(--rose-primary) 0%, var(--coral) 100%);"
+    style="background: var(--off-white);"
   >
     <div class="max-w-2xl mx-auto reveal">
+      <div class="section-divider"></div>
       <h2
-        class="text-3xl lg:text-4xl font-light text-white mb-4"
-        style="font-family: var(--font-heading);"
+        class="text-3xl lg:text-4xl font-light mb-4"
+        style="font-family: var(--font-heading); color: var(--charcoal);"
       >
         Ready to book {category.name}?
       </h2>
-      <p class="text-white opacity-90 mb-8" style="font-family: var(--font-body);">
+      <p class="mb-8" style="font-family: var(--font-body); color: var(--body-text);">
         Book your appointment online or start with a free consultation.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="/book"
-          class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide bg-white transition-all duration-200"
-          style="color: var(--rose-primary);"
-          onmouseover="this.style.background='var(--off-white)'"
-          onmouseout="this.style.background='white'"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg text-sm font-medium tracking-wide text-white transition-all duration-200"
+          style="background-color: var(--rose-primary);"
+          onmouseover="this.style.backgroundColor='var(--rose-deep)'"
+          onmouseout="this.style.backgroundColor='var(--rose-primary)'"
         >
           Book Now
         </a>
         <a
           href="/contact"
-          class="inline-flex items-center justify-center px-8 py-4 rounded-full text-sm font-medium tracking-wide transition-all duration-200"
-          style="border: 1.5px solid rgba(255,255,255,0.7); color: white;"
-          onmouseover="this.style.background='rgba(255,255,255,0.15)'"
-          onmouseout="this.style.background='transparent'"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-lg text-sm font-medium tracking-wide transition-all duration-200"
+          style="border: 1.5px solid var(--rose-primary); color: var(--rose-primary);"
+          onmouseover="this.style.background='var(--rose-primary)'; this.style.color='white';"
+          onmouseout="this.style.background='transparent'; this.style.color='var(--rose-primary)';"
         >
           Get In Touch
         </a>

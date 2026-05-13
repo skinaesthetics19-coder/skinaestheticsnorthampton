@@ -3,13 +3,15 @@
 
 @theme {
   --color-rose-primary: #C4717A;
+  --color-rose-deep: #A85761;
   --color-coral: #D4856A;
   --color-blush: #E8B4A8;
   --color-blush-light: #F5E6E0;
   --color-gold-accent: #C9A84C;
   --color-off-white: #FAF8F5;
-  --color-charcoal: #1C1C1C;
-  --color-warm-grey: #6B6B6B;
+  --color-charcoal: #1A1A1A;
+  --color-body-text: #3D3D3D;
+  --color-warm-grey: #525252;
   --color-light-grey: #EDE8E4;
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
@@ -18,14 +20,16 @@
 
 :root {
   --rose-primary: #C4717A;
+  --rose-deep: #A85761;
   --coral: #D4856A;
   --blush: #E8B4A8;
   --blush-light: #F5E6E0;
   --gold-accent: #C9A84C;
   --white: #FFFFFF;
   --off-white: #FAF8F5;
-  --charcoal: #1C1C1C;
-  --warm-grey: #6B6B6B;
+  --charcoal: #1A1A1A;
+  --body-text: #3D3D3D;
+  --warm-grey: #525252;
   --light-grey: #EDE8E4;
 }
 
@@ -39,16 +43,63 @@ html {
 
 body {
   font-family: var(--font-body);
-  color: var(--charcoal);
+  color: var(--body-text);
   background-color: var(--white);
-  line-height: 1.6;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  font-weight: 400;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: var(--font-heading);
   line-height: 1.15;
-  font-weight: 300;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+p {
+  color: var(--body-text);
+}
+
+/* Primary button: solid rose, refined corners */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  background-color: var(--rose-primary);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+.btn-primary:hover {
+  background-color: var(--rose-deep);
+}
+
+/* Ghost / secondary button */
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  background-color: transparent;
+  color: var(--rose-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  border: 1.5px solid var(--rose-primary);
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  cursor: pointer;
+}
+.btn-ghost:hover {
+  background-color: var(--rose-primary);
+  color: white;
 }
 
 /* Scroll reveal animations */
