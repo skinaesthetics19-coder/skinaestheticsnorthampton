@@ -51,7 +51,7 @@ export const categories: TreatmentCategory[] = [
     tagline: 'Natural rejuvenation using your body\'s own growth factors.',
     description: 'Harness your body\'s natural healing power to rejuvenate skin and stimulate hair growth.',
     longDescription:
-      'Platelet-Rich Plasma (PRP) therapy uses a small sample of your own blood, which is spun in a centrifuge to concentrate the platelets. These growth-factor-rich platelets are then injected or micro-needled back into the treatment area to stimulate collagen production, improve skin texture, and accelerate natural healing.',
+      "Platelet-Rich Plasma (PRP) therapy is an advanced regenerative treatment that harnesses the healing power of your own blood to rejuvenate skin and support healthy hair growth. A small blood sample is taken and processed in a specialised centrifuge to isolate a concentrated layer of growth-factor-rich platelets. These powerful platelets are then carefully injected or micro-needled into the targeted area to stimulate collagen production, enhance skin texture and tone, and accelerate the body's natural repair process.\n\nFor hair restoration, PRP is strategically injected into the scalp to revitalise dormant hair follicles, helping to improve hair thickness, strengthen existing hair, and reduce shedding over time. The result is a natural, non-surgical approach to healthier skin and fuller-looking hair.",
     startingFrom: '£120',
     icon: 'diamond',
     treatments: [

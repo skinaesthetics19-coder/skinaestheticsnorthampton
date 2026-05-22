@@ -86,9 +86,11 @@ if (!category) {
           >
             Treatment Overview
           </h2>
-          <p class="text-base leading-relaxed" style="color: var(--warm-grey);">
-            {category.longDescription}
-          </p>
+          {category.longDescription.split('\n\n').map((para) => (
+            <p class="text-base leading-relaxed mb-4 last:mb-0" style="color: var(--warm-grey);">
+              {para}
+            </p>
+          ))}
         </div>
         <div class="lg:col-span-2 reveal reveal-delay-2">
           <div
