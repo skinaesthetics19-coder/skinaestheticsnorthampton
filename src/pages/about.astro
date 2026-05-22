@@ -14,18 +14,19 @@ import Icon from '../components/Icon.astro';
 
   <PageHero
     title="About Us"
-    subtitle="The people, values, and philosophy behind Skin Aesthetics Northampton."
+    subtitle="Care, precision, and a genuine respect for skin."
   />
 
   <!-- Practitioner Bio -->
-  <section class="py-24 px-6 lg:px-8" style="background: white;">
-    <div class="max-w-7xl mx-auto">
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-        <div class="reveal">
-          <div class="aspect-[4/5] rounded-3xl overflow-hidden" style="background-color: var(--blush-light);">
+  <section class="py-32 px-6 lg:px-8" style="background: white;">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+        <!-- Image: sticky on the left, smaller column -->
+        <div class="lg:col-span-5 lg:sticky lg:top-32 reveal">
+          <div class="aspect-[4/5] overflow-hidden">
             <img
               src="/images/1.jpg"
-              alt="Skin Aesthetics Northampton practitioner"
+              alt="Kate, Skin Aesthetics Northampton practitioner"
               class="w-full h-full object-cover"
               width="800"
               height="1000"
@@ -33,19 +34,19 @@ import Icon from '../components/Icon.astro';
             />
           </div>
         </div>
-        <div class="reveal reveal-delay-2">
-          <div class="section-divider" style="margin-left: 0;"></div>
+        <!-- Text: 6 cols, offset by 1 for breathing room -->
+        <div class="lg:col-span-6 lg:col-start-7 reveal reveal-delay-2">
           <p
-            class="text-sm font-medium tracking-widest uppercase mb-3"
-            style="color: var(--rose-primary); font-family: var(--font-body);"
+            class="text-xs font-medium tracking-[0.2em] uppercase mb-6"
+            style="color: var(--caramel); font-family: var(--font-body);"
           >
             Meet Kate
           </p>
           <h2
-            class="text-4xl lg:text-5xl font-light mb-6"
+            class="text-4xl lg:text-6xl font-light mb-10 leading-[1.05]"
             style="font-family: var(--font-heading); color: var(--charcoal);"
           >
-            Your Practitioner
+            Your practitioner.
           </h2>
           <p class="text-base leading-relaxed mb-4 text-justify hyphens-auto" style="color: var(--warm-grey);">
             With over 16 years of medical experience, I combine advanced clinical knowledge with a genuine passion for aesthetic medicine to help clients look and feel their absolute best. My approach is centred around enhancing your natural beauty, delivering refined, confidence-boosting results that never look overdone.
@@ -56,18 +57,18 @@ import Icon from '../components/Icon.astro';
           <p class="text-base leading-relaxed mb-4 text-justify hyphens-auto" style="color: var(--warm-grey);">
             I believe aesthetics should be personal. That's why every consultation and treatment plan is carefully tailored to your individual features, skin concerns, and goals. Whether you're seeking subtle rejuvenation or a more noticeable transformation, you can feel confident knowing you are in experienced, skilled, and caring hands.
           </p>
-          <p class="text-base leading-relaxed mb-2 italic" style="color: var(--charcoal); font-family: var(--font-heading); font-size: 1.15rem;">
+          <p class="text-base leading-relaxed mb-4 italic" style="color: var(--charcoal); font-family: var(--font-heading); font-size: 1.2rem;">
             Your confidence is my priority, because when you feel good in your skin, it shows.
           </p>
-          <p class="text-sm font-medium mb-8" style="color: var(--rose-primary); font-family: var(--font-heading); font-style: italic;">
-            — Kate
+          <p class="mb-10" style="color: var(--brown-primary); font-family: 'Tangerine', cursive; font-size: 3rem; line-height: 1; font-weight: 700;">
+            Kate
           </p>
           <a
             href="/book"
             class="inline-flex items-center justify-center px-8 py-4 rounded-lg text-sm font-medium tracking-wide text-white transition-all duration-200"
-            style="background-color: var(--rose-primary);"
-            onmouseover="this.style.backgroundColor='var(--rose-deep)'"
-            onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+            style="background-color: var(--brown-primary);"
+            onmouseover="this.style.backgroundColor='var(--brown-deep)'"
+            onmouseout="this.style.backgroundColor='var(--brown-primary)'"
           >
             Book a Consultation
           </a>
@@ -104,7 +105,7 @@ import Icon from '../components/Icon.astro';
   </section>
 
   <!-- Values -->
-  <section class="py-24 px-6 lg:px-8" style="background: white;">
+  <section class="py-32 px-6 lg:px-8" style="background: white;">
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-16 reveal">
         <div class="section-divider"></div>
@@ -158,7 +159,7 @@ import Icon from '../components/Icon.astro';
 
   <!-- CTA -->
   <section
-    class="py-20 px-6 lg:px-8 text-center"
+    class="py-28 px-6 lg:px-8 text-center"
     style="background: var(--off-white);"
   >
     <div class="max-w-2xl mx-auto reveal">

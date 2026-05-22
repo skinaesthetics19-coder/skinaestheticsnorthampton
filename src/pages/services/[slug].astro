@@ -27,48 +27,43 @@ if (!category) {
 
   <!-- Hero -->
   <section
-    class="relative pt-52 pb-24 overflow-hidden"
-    style="background: linear-gradient(135deg, var(--blush-light) 0%, var(--off-white) 70%, white 100%);"
+    class="relative pt-52 pb-32 overflow-hidden"
+    style="background: var(--ivory);"
   >
-    <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
-      <div class="absolute top-10 right-10 w-64 h-64 rounded-full opacity-15"
-        style="background: radial-gradient(circle, var(--blush) 0%, transparent 70%);"></div>
-    </div>
     <div class="max-w-4xl mx-auto px-6 lg:px-8">
       <a
         href="/services"
-        class="inline-flex items-center gap-2 text-sm mb-8 transition-colors duration-200"
+        class="inline-flex items-center gap-2 text-sm mb-12 transition-colors duration-200"
         style="color: var(--warm-grey);"
-        onmouseover="this.style.color='var(--rose-primary)'"
+        onmouseover="this.style.color='var(--brown-primary)'"
         onmouseout="this.style.color='var(--warm-grey)'"
       >
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 16l-4-4m0 0l4-4m-4 4h18" />
         </svg>
         All Treatments
       </a>
-      <div class="section-divider" style="margin-left: 0;"></div>
-      <div
-        class="inline-flex items-center justify-center w-16 h-16 rounded-full mb-6"
-        style="background-color: var(--blush-light); color: var(--rose-primary);"
+      <p
+        class="text-xs font-medium tracking-[0.2em] uppercase mb-6"
+        style="color: var(--caramel);"
       >
-        <Icon name={category.icon} class="w-8 h-8" />
-      </div>
+        Treatment
+      </p>
       <h1
-        class="text-5xl lg:text-6xl font-light leading-tight mb-4"
+        class="text-5xl lg:text-7xl font-light leading-[1.05] mb-6"
         style="font-family: var(--font-heading); color: var(--charcoal);"
       >
         {category.name}
       </h1>
-      <p class="text-xl mb-8" style="color: var(--warm-grey); font-family: var(--font-heading); font-style: italic;">
+      <p class="text-xl lg:text-2xl mb-10 max-w-2xl" style="color: var(--warm-grey); font-family: var(--font-heading); font-style: italic; font-weight: 300;">
         {category.tagline}
       </p>
       <a
         href="/book"
         class="inline-flex items-center justify-center px-8 py-4 rounded-lg text-sm font-medium tracking-wide text-white transition-all duration-200"
-        style="background-color: var(--rose-primary);"
-        onmouseover="this.style.backgroundColor='var(--rose-deep)'"
-        onmouseout="this.style.backgroundColor='var(--rose-primary)'"
+        style="background-color: var(--brown-primary);"
+        onmouseover="this.style.backgroundColor='var(--brown-deep)'"
+        onmouseout="this.style.backgroundColor='var(--brown-primary)'"
       >
         Book This Treatment
       </a>
@@ -76,7 +71,7 @@ if (!category) {
   </section>
 
   <!-- Overview -->
-  <section class="py-20 px-6 lg:px-8" style="background: white;">
+  <section class="py-28 px-6 lg:px-8" style="background: white;">
     <div class="max-w-4xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
         <div class="lg:col-span-3 reveal">
@@ -94,21 +89,22 @@ if (!category) {
         </div>
         <div class="lg:col-span-2 reveal reveal-delay-2">
           <div
-            class="rounded-2xl p-6"
-            style="background-color: var(--blush-light); border: 1px solid var(--blush);"
+            class="rounded-2xl p-7"
+            style="background-color: var(--ivory); border: 1px solid var(--light-grey);"
           >
+            <p class="text-xs font-medium tracking-[0.2em] uppercase mb-4" style="color: var(--caramel);">
+              What to expect
+            </p>
             <h3
-              class="text-lg font-medium mb-4"
+              class="text-2xl font-light mb-5"
               style="font-family: var(--font-heading); color: var(--charcoal);"
             >
-              What to Expect
+              Your visit, step by step.
             </h3>
             <ul class="space-y-3">
               {category.whatToExpect.map((step) => (
                 <li class="flex items-start gap-3 text-sm" style="color: var(--warm-grey);">
-                  <svg class="mt-1 shrink-0 w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor" style="color: var(--rose-primary);" aria-hidden="true">
-                    <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
-                  </svg>
+                  <span class="mt-1.5 shrink-0 w-1.5 h-1.5 rounded-full" style="background: var(--caramel);"></span>
                   {step}
                 </li>
               ))}
@@ -120,7 +116,7 @@ if (!category) {
   </section>
 
   <!-- Pricing -->
-  <section class="py-20 px-6 lg:px-8" style="background-color: var(--off-white);">
+  <section class="py-28 px-6 lg:px-8" style="background-color: var(--off-white);">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-12 reveal">
         <h2
@@ -140,7 +136,7 @@ if (!category) {
             <span class="text-sm font-medium" style="color: var(--charcoal);">{t.name}</span>
             <span
               class="text-sm font-medium ml-4 shrink-0"
-              style="color: var(--rose-primary);"
+              style="color: var(--charcoal);"
             >
               {t.price}
             </span>
@@ -162,7 +158,7 @@ if (!category) {
   </section>
 
   <!-- FAQs -->
-  <section class="py-20 px-6 lg:px-8" style="background: white;">
+  <section class="py-28 px-6 lg:px-8" style="background: white;">
     <div class="max-w-3xl mx-auto">
       <div class="text-center mb-12 reveal">
         <h2
@@ -204,7 +200,7 @@ if (!category) {
 
   <!-- Bottom CTA -->
   <section
-    class="py-20 px-6 lg:px-8 text-center"
+    class="py-28 px-6 lg:px-8 text-center"
     style="background: var(--off-white);"
   >
     <div class="max-w-2xl mx-auto reveal">

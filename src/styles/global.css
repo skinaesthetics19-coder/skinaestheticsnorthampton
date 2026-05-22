@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@400;500;600&family=Tangerine:wght@400;700&display=swap');
 @import "tailwindcss";
 
 @theme {
@@ -146,13 +146,12 @@ p {
   }
 }
 
-/* Section divider */
+/* Section divider — single hairline */
 .section-divider {
-  width: 60px;
-  height: 2px;
-  background: linear-gradient(90deg, var(--brown-primary), var(--caramel));
-  margin: 0 auto 1.5rem;
-  border-radius: 2px;
+  width: 40px;
+  height: 1px;
+  background: var(--caramel);
+  margin: 0 auto 2rem;
 }
 
 /* Promotional shimmer */

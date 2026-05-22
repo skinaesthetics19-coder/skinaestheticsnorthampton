@@ -16,7 +16,7 @@ import { categories } from '../data/treatments';
 
   <PageHero
     title="Pricing"
-    subtitle="Transparent pricing — no hidden fees. All prices are inclusive."
+    subtitle="Transparent. No hidden fees."
   />
 
   <!-- Promo highlight -->
@@ -32,20 +32,20 @@ import { categories } from '../data/treatments';
     </p>
   </div>
 
-  <section class="py-20 px-6 lg:px-8" style="background: white;">
+  <section class="py-28 px-6 lg:px-8" style="background: white;">
     <div class="max-w-4xl mx-auto space-y-12">
       {categories.map((cat, ci) => (
         <div class={`reveal reveal-delay-${(ci % 3) + 1}`}>
-          <div class="flex items-center gap-3 mb-4">
-            <div
-              class="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
-              style="background-color: var(--blush-light); color: var(--rose-primary);"
+          <div class="flex items-baseline gap-6 mb-5">
+            <span
+              class="text-xs font-medium tracking-[0.2em] shrink-0"
+              style="color: var(--caramel);"
             >
-              <Icon name={cat.icon} class="w-5 h-5" />
-            </div>
-            <div>
+              {String(ci + 1).padStart(2, '0')}
+            </span>
+            <div class="flex-1">
               <h2
-                class="text-2xl font-medium"
+                class="text-2xl lg:text-3xl font-light mb-1"
                 style="font-family: var(--font-heading); color: var(--charcoal);"
               >
                 {cat.name}
@@ -61,8 +61,8 @@ import { categories } from '../data/treatments';
               >
                 <span class="text-sm" style="color: var(--charcoal);">{t.name}</span>
                 <span
-                  class="text-sm font-semibold ml-4 shrink-0"
-                  style="color: var(--rose-primary);"
+                  class="text-sm font-medium ml-4 shrink-0"
+                  style="color: var(--charcoal);"
                 >
                   {t.price}
                 </span>
@@ -87,7 +87,7 @@ import { categories } from '../data/treatments';
 
   <!-- CTA -->
   <section
-    class="py-20 px-6 lg:px-8 text-center"
+    class="py-28 px-6 lg:px-8 text-center"
     style="background: var(--off-white);"
   >
     <div class="max-w-2xl mx-auto reveal">
