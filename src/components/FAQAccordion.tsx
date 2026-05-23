@@ -3,7 +3,7 @@ import { useState } from 'react';
 const faqs = [
   {
     question: 'Where are you located?',
-    answer: 'We are based in Northampton, UK. Please get in touch via email or Instagram for our exact location and directions.',
+    answer: 'We are based at Wildfell Walk, Weedon Rd, Upton, Northampton NN5 4FZ. Please get in touch via email or Instagram if you need directions.',
   },
   {
     question: 'Do I need a consultation before booking a treatment?',

@@ -9,7 +9,7 @@ import FAQAccordion from '../components/FAQAccordion.tsx';
 
 <Layout
   title="Contact Us — Skin Aesthetics Northampton"
-  description="Get in touch with Skin Aesthetics Northampton. Email, Instagram, or use our contact form. Based in Northampton, UK."
+  description="Get in touch with Skin Aesthetics Northampton. Located at Wildfell Walk, Weedon Rd, Upton, Northampton NN5 4FZ. Email or visit us on Instagram."
 >
   <Nav />
 
@@ -85,8 +85,17 @@ import FAQAccordion from '../components/FAQAccordion.tsx';
               </div>
               <div>
                 <p class="text-sm font-medium mb-1" style="color: var(--charcoal);">Location</p>
-                <p class="text-sm" style="color: var(--warm-grey);">Northampton, UK</p>
-                <p class="text-xs mt-0.5" style="color: var(--warm-grey);">(Exact address provided on booking confirmation)</p>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Wildfell+Walk,+Weedon+Rd,+Upton,+Northampton+NN5+4FZ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-sm not-italic transition-colors duration-200"
+                  style="color: var(--warm-grey);"
+                  onmouseover="this.style.color='var(--brown-primary)'"
+                  onmouseout="this.style.color='var(--warm-grey)'"
+                >
+                  Wildfell Walk, Weedon Rd<br/>Upton, Northampton NN5 4FZ
+                </a>
               </div>
             </li>
           </ul>
