@@ -234,59 +234,7 @@ import { featuredCategories } from '../data/treatments';
     </div>
   </section>
 
-  <!-- ===================== BEFORE & AFTER TEASER ===================== -->
-  <section class="py-40 px-6 lg:px-8" style="background-color: white;">
-    <div class="max-w-7xl mx-auto">
-      <div class="text-center mb-20 reveal">
-        <p
-          class="text-xs font-medium tracking-[0.2em] uppercase mb-4"
-          style="color: var(--caramel);"
-        >
-          Real Results
-        </p>
-        <h2
-          class="text-4xl lg:text-6xl font-normal text-balance leading-[1.05]"
-          style="font-family: var(--font-heading); color: var(--charcoal);"
-        >
-          Skin, before and after.
-        </h2>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
-        {[1, 2, 3].map((_, i) => (
-          <div class={`reveal reveal-delay-${i + 1}`}>
-            <div
-              class="rounded-2xl overflow-hidden aspect-[3/4] flex items-center justify-center"
-              style="background: linear-gradient(135deg, var(--blush) 0%, var(--blush-light) 100%);"
-            >
-              <div class="text-center px-6">
-                <svg class="w-10 h-10 mx-auto mb-3" viewBox="0 0 24 24" fill="currentColor" style="color: var(--rose-primary);" aria-hidden="true">
-                  <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
-                </svg>
-                <p class="text-sm font-medium" style="color: var(--warm-grey); font-family: var(--font-body);">
-                  Before &amp; After
-                </p>
-                <p class="text-xs mt-1" style="color: var(--warm-grey);">Real client result</p>
-                <p class="text-xs mt-2 italic" style="color: var(--warm-grey);">(Photo coming in Phase 2)</p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div class="text-center mt-12 reveal">
-        <a
-          href="/gallery"
-          class="inline-flex items-center justify-center px-8 py-3.5 rounded-sm text-sm font-medium tracking-wide transition-all duration-200"
-          style="border: 1.5px solid var(--rose-primary); color: var(--rose-primary);"
-          onmouseover="this.style.background='var(--rose-primary)'; this.style.color='white';"
-          onmouseout="this.style.background='transparent'; this.style.color='var(--rose-primary)';"
-        >
-          View Full Gallery
-        </a>
-      </div>
-    </div>
-  </section>
+  {/* Before & After teaser hidden until real client photos are available (Phase 2) */}
 
   <!-- ===================== BOOKING CTA BANNER ===================== -->
   <section
