@@ -52,13 +52,13 @@ export const categories: TreatmentCategory[] = [
     description: 'Harness your body\'s natural healing power to rejuvenate skin and stimulate hair growth.',
     longDescription:
       "Platelet-Rich Plasma (PRP) therapy is an advanced regenerative treatment that harnesses the healing power of your own blood to rejuvenate skin and support healthy hair growth. A small blood sample is taken and processed in a specialised centrifuge to isolate a concentrated layer of growth-factor-rich platelets. These powerful platelets are then carefully injected or micro-needled into the targeted area to stimulate collagen production, enhance skin texture and tone, and accelerate the body's natural repair process.\n\nFor hair restoration, PRP is strategically injected into the scalp to revitalise dormant hair follicles, helping to improve hair thickness, strengthen existing hair, and reduce shedding over time. The result is a natural, non-surgical approach to healthier skin and fuller-looking hair.",
-    startingFrom: '£100',
+    startingFrom: '£80',
     icon: 'diamond',
     treatments: [
       { name: 'Full Face Skin Rejuvenation', price: '£180' },
       { name: 'PRP Scalp (Hair Growth)', price: '£100' },
       { name: 'Face + Hair (Single Session)', price: '£180' },
-      { name: 'Chest PRP', price: '£120' },
+      { name: 'Chest PRP', price: '£80' },
     ],
     whatToExpect: [
       'A small blood sample is taken (like a routine blood test)',
@@ -124,10 +124,10 @@ export const categories: TreatmentCategory[] = [
     treatments: [
       { name: 'Microneedling (starts from)', price: '£80' },
       { name: 'Microneedling + Jelly Mask', price: '£100' },
-      { name: 'Microneedling + Dermaplane', price: '£130' },
-      { name: 'Full Face with PRP (Microneedling Pen)', price: '£110' },
+      { name: 'Microneedling + Dermaplane', price: '£110' },
+      { name: 'Full Face with PRP (Microneedling Pen)', price: '£120' },
       { name: 'Neck with PRP (Microneedling Pen)', price: '£90' },
-      { name: 'Scalp Microneedling', price: '£90' },
+      { name: 'Scalp Microneedling', price: '£80' },
     ],
     whatToExpect: [
       'Skin is cleansed and numbing cream applied',
@@ -158,7 +158,7 @@ export const categories: TreatmentCategory[] = [
     icon: 'circle-rings',
     treatments: [
       { name: 'Skin Boosters (from)', price: '£80' },
-      { name: 'Profhilo', price: '£180' },
+      { name: 'Profhilo', price: '£120' },
     ],
     whatToExpect: [
       'Consultation to determine the right product for you',
@@ -185,12 +185,12 @@ export const categories: TreatmentCategory[] = [
     description: 'Luxurious, results-driven facials tailored to your skin\'s individual needs.',
     longDescription:
       'Our carefully curated facials combine the latest professional techniques with premium skincare products. Each facial is fully tailored to your skin, whether you are looking for deep cleansing, brightening, or anti-ageing results. You will leave with visibly improved, radiant skin.',
-    startingFrom: '£75',
+    startingFrom: '£50',
     icon: 'flower',
     treatments: [
-      { name: 'Deep Cleanse Facial with Steam', price: '£75' },
-      { name: 'Dermaplane Facial', price: '£110' },
-      { name: 'Glass Skin Facial', price: '£120' },
+      { name: 'Deep Cleanse Facial with Steam', price: '£60' },
+      { name: 'Dermaplane Facial', price: '£50' },
+      { name: 'Glass Skin Facial', price: '£60' },
     ],
     whatToExpect: [
       'A thorough skin analysis before treatment',
