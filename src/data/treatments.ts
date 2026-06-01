@@ -52,12 +52,12 @@ export const categories: TreatmentCategory[] = [
     description: 'Harness your body\'s natural healing power to rejuvenate skin and stimulate hair growth.',
     longDescription:
       "Platelet-Rich Plasma (PRP) therapy is an advanced regenerative treatment that harnesses the healing power of your own blood to rejuvenate skin and support healthy hair growth. A small blood sample is taken and processed in a specialised centrifuge to isolate a concentrated layer of growth-factor-rich platelets. These powerful platelets are then carefully injected or micro-needled into the targeted area to stimulate collagen production, enhance skin texture and tone, and accelerate the body's natural repair process.\n\nFor hair restoration, PRP is strategically injected into the scalp to revitalise dormant hair follicles, helping to improve hair thickness, strengthen existing hair, and reduce shedding over time. The result is a natural, non-surgical approach to healthier skin and fuller-looking hair.",
-    startingFrom: '£120',
+    startingFrom: '£100',
     icon: 'diamond',
     treatments: [
       { name: 'Full Face Skin Rejuvenation', price: '£180' },
-      { name: 'PRP Scalp (Hair Growth)', price: '£150' },
-      { name: 'Face + Hair (Single Session)', price: '£280' },
+      { name: 'PRP Scalp (Hair Growth)', price: '£100' },
+      { name: 'Face + Hair (Single Session)', price: '£180' },
       { name: 'Chest PRP', price: '£120' },
     ],
     whatToExpect: [
@@ -89,11 +89,11 @@ export const categories: TreatmentCategory[] = [
     description: 'The next evolution of PRP, with denser growth factors for superior skin regeneration.',
     longDescription:
       'Platelet-Rich Fibrin (PRF) is an advanced evolution of PRP. Processed without anticoagulants, PRF forms a fibrin matrix that releases growth factors slowly over time, delivering longer-lasting and more natural-looking results. It is particularly effective for delicate areas like the under-eyes and neck.',
-    startingFrom: '£120',
+    startingFrom: '£90',
     icon: 'rhombus',
     treatments: [
-      { name: 'Under Eyes / Smile Lines', price: '£150' },
-      { name: 'Neck (Horizontal Lines Reduction)', price: '£120' },
+      { name: 'Under Eyes / Smile Lines', price: '£90' },
+      { name: 'Neck (Horizontal Lines Reduction)', price: '£90' },
     ],
     whatToExpect: [
       'Blood is drawn and spun using a specialist protocol',
