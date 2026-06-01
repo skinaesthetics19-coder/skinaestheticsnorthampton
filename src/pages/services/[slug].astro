@@ -82,7 +82,7 @@ if (!category) {
             Treatment Overview
           </h2>
           {category.longDescription.split('\n\n').map((para) => (
-            <p class="text-base leading-relaxed mb-4 last:mb-0" style="color: var(--warm-grey);">
+            <p class="text-base leading-relaxed mb-4 last:mb-0 text-justify hyphens-auto" style="color: var(--warm-grey);">
               {para}
             </p>
           ))}
@@ -189,7 +189,7 @@ if (!category) {
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
               </svg>
             </summary>
-            <div class="px-6 pb-5 text-sm leading-relaxed" style="color: var(--warm-grey);">
+            <div class="px-6 pb-5 text-sm leading-relaxed text-justify hyphens-auto" style="color: var(--warm-grey);">
               {faq.answer}
             </div>
           </details>
