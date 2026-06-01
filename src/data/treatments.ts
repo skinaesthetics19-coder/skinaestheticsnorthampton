@@ -221,9 +221,9 @@ export const categories: TreatmentCategory[] = [
     icon: 'leaf',
     treatments: [
       { name: 'Dermaplaning', price: '£50' },
-      { name: 'Dermaplaning + Enzyme Peel', price: '£55' },
+      { name: 'Dermaplaning + Enzyme Peel', price: '£60' },
       { name: 'Dermaplaning + Jelly Mask', price: '£65' },
-      { name: 'Dermaplaning + Chemical Peel', price: '£105' },
+      { name: 'Dermaplaning + Chemical Peel', price: '£75' },
     ],
     whatToExpect: [
       'Skin is thoroughly cleansed and dried',
@@ -250,10 +250,10 @@ export const categories: TreatmentCategory[] = [
     description: 'Reveal brighter, clearer skin with clinically effective professional peels.',
     longDescription:
       'Chemical peels use carefully selected acids to exfoliate the skin at a deeper level, stimulating cell renewal and targeting a wide range of concerns including pigmentation, acne, fine lines, and uneven texture. Our practitioner selects the appropriate peel strength for your skin type and concerns.',
-    startingFrom: '£75',
+    startingFrom: '£70',
     icon: 'sun-burst',
     treatments: [
-      { name: 'Chemical Peel', price: '£75' },
+      { name: 'Chemical Peel', price: '£70' },
       { name: 'BioRePeel', price: '£90' },
     ],
     whatToExpect: [
