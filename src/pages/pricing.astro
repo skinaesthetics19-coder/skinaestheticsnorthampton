@@ -24,7 +24,7 @@ import { categories } from '../data/treatments';
     class="py-6 px-6 text-center"
     style="background-color: var(--blush-light); border-bottom: 1px solid var(--blush);"
   >
-    <p class="text-base font-medium flex items-center justify-center gap-2 flex-wrap" style="color: var(--charcoal); font-family: var(--font-heading);">
+    <p class="text-base font-medium flex items-center justify-center gap-2 flex-wrap" style="color: var(--charcoal);">
       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" style="color: var(--rose-primary);" aria-hidden="true">
         <path d="M12 2 L13.5 9 L20.5 10.5 L13.5 12 L12 19 L10.5 12 L3.5 10.5 L10.5 9 Z" />
       </svg>
@@ -32,7 +32,7 @@ import { categories } from '../data/treatments';
     </p>
   </div>
 
-  <section class="py-28 px-6 lg:px-8" style="background: white;">
+  <section class="py-36 px-6 lg:px-8" style="background: white;">
     <div class="max-w-4xl mx-auto space-y-12">
       {categories.map((cat, ci) => (
         <div class={`reveal reveal-delay-${(ci % 3) + 1}`}>
@@ -45,8 +45,8 @@ import { categories } from '../data/treatments';
             </span>
             <div class="flex-1">
               <h2
-                class="text-2xl lg:text-3xl font-light mb-1"
-                style="font-family: var(--font-heading); color: var(--charcoal);"
+                class="text-xl lg:text-2xl font-medium mb-1"
+                style="color: var(--charcoal);"
               >
                 {cat.name}
               </h2>
@@ -87,13 +87,13 @@ import { categories } from '../data/treatments';
 
   <!-- CTA -->
   <section
-    class="py-28 px-6 lg:px-8 text-center"
+    class="py-36 px-6 lg:px-8 text-center"
     style="background: var(--off-white);"
   >
     <div class="max-w-2xl mx-auto reveal">
       <div class="section-divider"></div>
       <h2
-        class="text-3xl lg:text-4xl font-light mb-4"
+        class="text-3xl lg:text-4xl font-normal text-balance mb-4"
         style="font-family: var(--font-heading); color: var(--charcoal);"
       >
         Ready to book your treatment?

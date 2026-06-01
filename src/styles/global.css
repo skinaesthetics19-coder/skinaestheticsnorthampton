@@ -10,18 +10,20 @@
   --color-cream: #F5EEE6;
   --color-ivory: #FAF7F2;
   --color-off-white: #FAF7F2;
-  --color-charcoal: #111111;
-  --color-body-text: #1F1F1F;
-  --color-warm-grey: #2A2A2A;
-  --color-light-grey: #EAE3D9;
+  --color-charcoal: #2A2018;
+  --color-body-text: #2A2018;
+  --color-warm-grey: #8C7E6F;
+  --color-light-grey: rgba(42,32,24,0.10);
 
-  /* Legacy rose tokens kept as aliases (now mapped to brown) for compatibility */
-  --color-rose-primary: #5C3A1E;
-  --color-rose-deep: #3F2611;
+  /* Legacy rose tokens kept as aliases (now mapped to terracotta) for compatibility */
+  --color-rose-primary: #B86A47;
+  --color-rose-deep: #A35A3B;
   --color-coral: #A8825A;
   --color-blush: #C7B299;
   --color-blush-light: #F5EEE6;
   --color-gold-accent: #A8825A;
+  --color-accent-terracotta: #B86A47;
+  --color-accent-terracotta-deep: #A35A3B;
 
   --font-heading: 'Cormorant Garamond', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
@@ -37,18 +39,20 @@
   --ivory: #FAF7F2;
   --white: #FFFFFF;
   --off-white: #FAF7F2;
-  --charcoal: #111111;
-  --body-text: #1F1F1F;
-  --warm-grey: #2A2A2A;
-  --light-grey: #EAE3D9;
+  --charcoal: #2A2018;
+  --body-text: #2A2018;
+  --warm-grey: #8C7E6F;
+  --light-grey: rgba(42,32,24,0.10);
 
-  /* Legacy rose tokens remapped to brown for seamless updates */
-  --rose-primary: #5C3A1E;
-  --rose-deep: #3F2611;
+  /* Legacy rose tokens remapped to terracotta for seamless updates */
+  --rose-primary: #B86A47;
+  --rose-deep: #A35A3B;
   --coral: #A8825A;
   --blush: #C7B299;
   --blush-light: #F5EEE6;
   --gold-accent: #A8825A;
+  --accent-terracotta: #B86A47;
+  --accent-terracotta-deep: #A35A3B;
 }
 
 *, *::before, *::after {
@@ -68,9 +72,16 @@ body {
   font-weight: 400;
 }
 
-h1, h2, h3, h4, h5 {
+h1, h2 {
   font-family: var(--font-heading);
   line-height: 1.15;
+  font-weight: 400;
+  color: var(--charcoal);
+}
+
+h3, h4, h5 {
+  font-family: var(--font-body);
+  line-height: 1.2;
   font-weight: 400;
   color: var(--charcoal);
 }
