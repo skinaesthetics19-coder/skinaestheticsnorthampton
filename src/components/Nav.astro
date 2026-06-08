@@ -18,6 +18,16 @@ const currentPath = Astro.url.pathname;
   style="background: transparent;"
 >
   <!-- Promo Banner (inside fixed header so it's never obscured) -->
+  <!-- Inline script runs synchronously BEFORE the banner element is parsed, so if dismissed this session it never renders at all -->
+  <script is:inline>
+    (function () {
+      try {
+        if (sessionStorage.getItem('promo-dismissed') === '1') {
+          document.documentElement.classList.add('promo-already-dismissed');
+        }
+      } catch (e) { /* sessionStorage unavailable — fall through */ }
+    })();
+  </script>
   <div
     id="promo-banner"
     class="promo-shimmer text-white text-sm font-medium tracking-wide"
@@ -170,8 +180,12 @@ const currentPath = Astro.url.pathname;
     box-shadow: none;
   }
 
-  /* Hide promo banner once dismissed */
+  /* Hide promo banner once dismissed (manual click) */
   #promo-banner.hidden {
+    display: none;
+  }
+  /* Hide instantly on subsequent page loads in the same session */
+  html.promo-already-dismissed #promo-banner {
     display: none;
   }
 </style>
@@ -203,8 +217,9 @@ const currentPath = Astro.url.pathname;
     mobileBtn.setAttribute('aria-expanded', String(!isOpen));
   });
 
-  // Promo dismiss
+  // Promo dismiss — hide and remember for the rest of the session
   document.getElementById('promo-dismiss')?.addEventListener('click', () => {
     document.getElementById('promo-banner')?.classList.add('hidden');
+    try { sessionStorage.setItem('promo-dismissed', '1'); } catch (e) { /* ignore */ }
   });
 </script>
