@@ -10,8 +10,8 @@ export default defineConfig({
   integrations: [
     react(),
     sitemap({
-      // Exclude gallery from sitemap until real photos are added (Phase 2)
-      filter: (page) => !page.includes('/gallery'),
+      // Exclude gallery (Phase 2 — awaiting real photos) and /thanks (form confirmation, not for SEO)
+      filter: (page) => !page.includes('/gallery') && !page.includes('/thanks'),
     }),
   ],
   vite: {

@@ -124,11 +124,20 @@ import FAQAccordion from '../components/FAQAccordion.tsx';
             Send a Message
           </h2>
           <form
-            action="mailto:skinaesthetics19@gmail.com"
+            action="/thanks"
             method="POST"
-            enctype="text/plain"
+            data-static-form-name="contact"
             class="space-y-5"
           >
+            {/* Honeypot field — bots fill it, humans don't see it */}
+            <input
+              type="text"
+              name="company_website"
+              tabindex="-1"
+              autocomplete="off"
+              style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;"
+              aria-hidden="true"
+            />
             <div>
               <label
                 for="name"

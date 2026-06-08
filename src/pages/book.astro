@@ -55,11 +55,20 @@ import PageHero from '../components/PageHero.astro';
 
         <div class="max-w-2xl mx-auto">
           <form
-            action="mailto:skinaesthetics19@gmail.com"
+            action="/thanks"
             method="POST"
-            enctype="text/plain"
+            data-static-form-name="booking-enquiry"
             class="space-y-5"
           >
+            {/* Honeypot field — bots fill it, humans don't see it */}
+            <input
+              type="text"
+              name="company_website"
+              tabindex="-1"
+              autocomplete="off"
+              style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;"
+              aria-hidden="true"
+            />
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label for="name" class="block text-sm font-medium mb-2" style="color: var(--charcoal);">

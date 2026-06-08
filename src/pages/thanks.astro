@@ -1,0 +1,63 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="Thank you — Skin Aesthetics Northampton"
+  description="Your message has been received. We'll be in touch soon."
+>
+  <Nav />
+
+  <section
+    class="pt-52 pb-40 px-6 lg:px-8 text-center"
+    style="background: var(--ivory); min-height: 70vh;"
+  >
+    <div class="max-w-xl mx-auto reveal">
+      <p
+        class="text-xs font-medium tracking-[0.3em] uppercase mb-8"
+        style="color: var(--caramel); font-family: var(--font-body);"
+      >
+        Message Received
+      </p>
+
+      <h1
+        class="text-4xl lg:text-6xl font-normal leading-[1.05] text-balance mb-8"
+        style="font-family: var(--font-heading); color: var(--charcoal);"
+      >
+        Thank you.
+      </h1>
+
+      <p
+        class="text-lg leading-relaxed mb-10"
+        style="font-family: var(--font-heading); font-style: italic; color: var(--warm-grey);"
+      >
+        Your message is on its way. We'll be in touch shortly &mdash; usually within one working day.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="/"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-sm text-sm font-medium tracking-wide text-white transition-all duration-200"
+          style="background-color: var(--brown-primary);"
+          onmouseover="this.style.backgroundColor='var(--brown-deep)'"
+          onmouseout="this.style.backgroundColor='var(--brown-primary)'"
+        >
+          Back to Home
+        </a>
+        <a
+          href="/services"
+          class="inline-flex items-center justify-center px-8 py-4 rounded-sm text-sm font-medium tracking-wide transition-all duration-200"
+          style="border: 1.5px solid var(--brown-primary); color: var(--brown-primary);"
+          onmouseover="this.style.background='var(--brown-primary)'; this.style.color='white';"
+          onmouseout="this.style.background='transparent'; this.style.color='var(--brown-primary)';"
+        >
+          Explore Treatments
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
