@@ -124,15 +124,19 @@ import FAQAccordion from '../components/FAQAccordion.tsx';
             Send a Message
           </h2>
           <form
-            action="/thanks"
+            action="https://api.web3forms.com/submit"
             method="POST"
-            data-static-form-name="contact"
             class="space-y-5"
           >
-            {/* Honeypot field — bots fill it, humans don't see it */}
+            {/* Web3Forms config */}
+            <input type="hidden" name="access_key" value="8b48f962-0305-4b68-904a-2b332593c727" />
+            <input type="hidden" name="subject" value="New contact enquiry — Skin Aesthetics Northampton" />
+            <input type="hidden" name="from_name" value="Skin Aesthetics Northampton — Contact form" />
+            <input type="hidden" name="redirect" value="https://skinaestheticsnorthampton.co.uk/thanks" />
+            {/* Honeypot — bots fill it, humans don't see it. Web3Forms reads this field. */}
             <input
-              type="text"
-              name="company_website"
+              type="checkbox"
+              name="botcheck"
               tabindex="-1"
               autocomplete="off"
               style="position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0;"
